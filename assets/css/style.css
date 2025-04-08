@@ -1,0 +1,197 @@
+/* Free code links. If you choose to use them, please give proper credit. Created by @syllkom | Syll's CodeLab */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --button-bg: #ffffff;
+  --button-shadow: rgba(0, 0, 0, 0.1);
+  --tag-bg: #f5f5f5;
+  --footer-color: #333333;
+}
+
+body.night-mode {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --button-bg: #1e1e1e;
+  --button-shadow: rgba(255, 255, 255, 0.05);
+  --tag-bg: #1e1e1e;
+  --footer-color: #aaaaaa;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fonts/Nunito-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fonts/Nunito-Black.ttf') format('truetype');
+  font-weight: 700; /* Black */
+  font-style: normal;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
+p, span, a {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.toggle-mode {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--button-bg);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px var(--button-shadow);
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.logo {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px var(--button-shadow);
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 16px;
+  color: #888;
+  margin-top: 5px;
+}
+
+p.description {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.link-button {
+  display: flex;
+  align-items: center;
+  background: var(--button-bg);
+  border-radius: 20px;
+  padding: 12px 20px;
+  margin: 10px 0;
+  width: 280px;
+  box-shadow: 0 4px 10px var(--button-shadow);
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 18px;
+  transition: transform 0.25s;
+}
+
+.link-button:active {
+  transform: scale(0.95);
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: var(--tag-bg);
+  box-shadow: 0 4px 10px var(--button-shadow);
+  margin-right: 15px;
+}
+
+.icon-box img {
+  width: 24px;
+  filter: none;
+}
+
+body.night-mode .icon-box img,
+body.night-mode .decorative-button img {
+  filter: invert(1) brightness(1.2);
+}
+
+.social-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.decorative-button {
+  display: flex;
+  align-items: center;
+  background: var(--tag-bg);
+  border-radius: 20px;
+  padding: 8px 16px;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 4px 10px var(--button-shadow);
+  transition: transform 0.25s;
+  cursor: pointer;
+}
+
+.decorative-button:active {
+  transform: scale(1.1);
+}
+
+.decorative-button img {
+  width: 20px;
+  margin-right: 8px;
+  filter: none;
+}
+
+footer {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: var(--footer-color);
+}
+
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-logos img {
+  height: 30px;
+}
+
+.footer-logos span {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 5px;
+}
