@@ -48,7 +48,6 @@ p, span, a {
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.10), #ffffff 40%, #ffffff 60%, rgba(0, 0, 0, 0.10));
   color: var(--text-color);
   display: flex;
@@ -56,7 +55,19 @@ body {
   align-items: center;
   text-align: center;
   padding: 20px;
+  min-height: 100vh;
+  justify-content: center;
   transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 430px;
+  width: 100%;
+  padding: 2.5rem 1.5rem;
 }
 
 .toggle-mode {
@@ -102,7 +113,7 @@ p.description {
   background: var(--button-bg);
   border-radius: 20px;
   padding: 12px 20px;
-  margin: 10px 0;
+  margin: 10px auto;
   width: 280px;
   box-shadow: 0 4px 10px var(--button-shadow);
   text-decoration: none;
@@ -194,4 +205,24 @@ footer {
   font-size: 20px;
   font-weight: bold;
   margin: 0 5px;
+}
+
+@media (min-width: 768px) {
+  body {
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  .container {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #ffffff 40%, #ffffff 60%, rgba(0, 0, 0, 0.05));
+    border-radius: 2rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    max-width: 430px;
+    width: 100%;
+    padding: 2.5rem 1.5rem;
+  }
 }
